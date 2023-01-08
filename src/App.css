@@ -1,38 +1,71 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 .App {
-  text-align: center;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.board {
+    width: calc(84px * 8);
+    height: calc(84px * 8);
+    display: flex;
+    flex-wrap: wrap;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.cell {
+    width: 84px;
+    height: 84px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.cell img {
+    width: 48px;
+    height: 48px;
+    position: relative;
+   
 }
 
-.App-link {
-  color: #61dafb;
+.black {
+    background-color: rgb(122, 122, 122);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.white {
+    background-color: rgb(182, 181, 181);
+}
+
+.selected {
+    background-color: rgba(112, 96, 76, 0.599);
+}
+
+.available {
+    height: 22px;
+    width: 22px;
+    border-radius: 50%;
+    background-color: rgba(0, 108, 9, 0.453);
+}
+
+.lost {
+    height: calc(50vh - 60px);
+    padding: 30px;
+    margin-left: 50px;
+    background-color: lightgray;
+}
+
+.timer {
+    margin-right: 50px;
+}
+
+.restartButton {
+    padding: 1em;
+    margin-bottom: 300px;
 }
